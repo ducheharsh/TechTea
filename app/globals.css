@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0D1117;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #30363D;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #484F58;
+}
+
+/* Selection */
+::selection {
+  background: #58A6FF;
+  color: #0D1117;
+}
+
+/* Focus styles */
+:focus-visible {
+  outline: 2px solid #58A6FF;
+  outline-offset: 2px;
+}
+
+/* Utility classes */
+@layer utilities {
+  .card {
+    @apply bg-secondary border border-border rounded-lg p-4;
+  }
+  
+  .btn-primary {
+    @apply bg-accent text-primary font-semibold px-4 py-2 rounded-md hover:bg-opacity-90 transition-all duration-200 active:scale-95;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-text font-semibold px-4 py-2 rounded-md border border-border hover:bg-hover transition-all duration-200 active:scale-95;
+  }
+  
+  .input {
+    @apply bg-primary border border-border rounded-md px-3 py-2 text-text placeholder-gray-500 focus:border-accent focus:outline-none transition-colors;
+  }
+  
+  .terminal-border {
+    @apply border border-border shadow-[0_0_15px_rgba(88,166,255,0.1)];
+  }
+}
